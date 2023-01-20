@@ -2,7 +2,7 @@
 
 <template>
   <div class="home-page">
-    <img src="@/assets/images/home/splashscreenLogo.png" />
+    <img src="@/assets/images/home/splashscreenLogo.png" class="image" />
     <router-link to="/game">
       <img src="@/assets/images/button/play.png" />
     </router-link>
@@ -21,5 +21,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .image {
+    transform: scale(0.8);
+  }
 }
 </style>
