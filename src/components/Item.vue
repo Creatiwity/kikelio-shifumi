@@ -33,11 +33,11 @@ function test() {
 
 <style lang="scss">
 .item {
-  width: 226px;
-  height: 226px;
-  background: url("@/assets/images/weapons/weaponBackground.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+    width: 100px;
+    height: 100px;
+    background: url('@/assets/images/weapons/weaponBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
   .item-icon {
     img {
