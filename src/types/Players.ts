@@ -1,7 +1,4 @@
-export enum PlayerType {
-  Player1 = "p1",
-  Player2 = "p2",
-}
+export type PlayerType = 'p1' | 'p2'
 
 export interface Player {
   name: string;

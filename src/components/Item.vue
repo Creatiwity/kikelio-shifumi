@@ -1,5 +1,5 @@
 <template>
-  <div class="item" @touchstart="test">
+  <div class="item" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
     <div class="item-icon">
       <img
         v-if="props.type === 'rock'"
@@ -20,14 +20,34 @@
 <script setup lang="ts">
 import type { PlayerType } from "@/types/Players";
 import type { Weapon } from "@/types/Weapon";
+import { ref } from "vue";
 
 const props = defineProps<{
   type: Weapon;
   forPlayer: PlayerType;
 }>();
 
-function test() {
-  console.log(props.type);
+const clientYStart = ref(0);
+
+function onTouchStart(e: TouchEvent) {
+    clientYStart.value = e.touches[0].clientY;
+}
+
+function onTouchMove(e: TouchEvent) {
+    e.preventDefault()
+}
+
+function onTouchEnd(e: TouchEvent) {
+    const clientYEnd = e.changedTouches[0].clientY;
+    if (props.forPlayer === 'p1') {
+        if (clientYEnd > clientYStart.value + 30) {
+            console.log('swipe')
+        }
+    } else {
+        if (clientYEnd < clientYStart.value + 30) {
+            console.log('swipe')
+        }
+    }
 }
 </script>
 

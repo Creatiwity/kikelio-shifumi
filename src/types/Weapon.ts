@@ -1,4 +1,4 @@
-import { PlayerType } from "./Players";
+import type { PlayerType } from "./Players";
 
 export type Weapon = "paper" | "rock" | "scissor";
 
@@ -13,7 +13,7 @@ export function determineWinner(
     (p1Weapon === "paper" && p2Weapon === "rock") ||
     (p1Weapon === "scissor" && p2Weapon === "paper")
   ) {
-    return PlayerType.Player1;
+    return 'p1';
   }
-  return PlayerType.Player2;
+  return 'p2';
 }
