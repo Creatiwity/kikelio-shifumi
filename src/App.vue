@@ -6,6 +6,8 @@ import { RouterView } from "vue-router";
   <RouterView />
 </template>
 
+<script setup lang="ts"></script>
+
 <style lang="scss">
 * {
   box-sizing: border-box;
@@ -14,6 +16,8 @@ import { RouterView } from "vue-router";
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .app {
