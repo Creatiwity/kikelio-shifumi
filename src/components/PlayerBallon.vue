@@ -4,7 +4,7 @@ import { computed } from "vue";
 
 const props = defineProps<{ player: Player }>();
 
-const width = computed(() => (390 * props.player.life) / 100);
+const width = computed(() => (150 * props.player.life) / 100);
 const src = computed(
   () =>
     new URL(`/src/assets/images/boss/${props.player.img}.png`, import.meta.url)

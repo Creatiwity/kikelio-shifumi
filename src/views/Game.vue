@@ -1,21 +1,30 @@
 <script lang="ts" setup>
-import type { Player } from '@/types/Players';
-import { ref } from 'vue';
+import PlayerSide from "@/components/PlayerSide.vue";
+import { PlayerType } from "@/types/Players";
 
-const players = ref<Player[]>([{
-    name: "Player 1",
-    img: "snowBoss",
-    backgound: "snowBg",
-    life: 0,
-},
-{
-    name: "Player 2",
-    img: "vulcanBoss",
-    backgound: "vulcanBg",
-    life: 0,
-}]) 
+const player1 = {
+  name: "Player 1",
+  img: "snowBoss",
+  background: "snowBg",
+  life: 100,
+};
+
+const player2 = {
+  name: "Player 2",
+  img: "jungleBoss",
+  background: "jungleBg",
+  life: 100,
+};
 </script>
 <template>
-<div class="game">
-</div>
+  <div class="game">
+    <PlayerSide :player="player1" :for-player="PlayerType.Player1" />
+    <PlayerSide :player="player2" :for-player="PlayerType.Player2" />
+  </div>
 </template>
+<style lang="scss">
+.game {
+  width: 100%;
+  height: 100%;
+}
+</style>

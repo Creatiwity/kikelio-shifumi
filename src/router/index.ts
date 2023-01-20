@@ -7,9 +7,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Homepage
+      path: "/",
+      name: "home",
+      component: Homepage,
     },
     {
       path: '/game',
@@ -24,4 +24,4 @@ const router = createRouter({
   ]
 })
 
-export default router
+export default router;

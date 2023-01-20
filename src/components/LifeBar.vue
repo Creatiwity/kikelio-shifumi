@@ -30,8 +30,8 @@ const type = computed(() => {
 
 <style lang="scss">
 .lifeBar {
-  width: 312px;
-  height: 42px;
+  width: 120px;
+  height: 16px;
   background-image: url("@/assets/images/battle/bar.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,8 +39,8 @@ const type = computed(() => {
   align-items: center;
 
   .level {
-    width: 273px;
-    height: 21px;
+    width: 104px;
+    height: 8px;
     margin: 0 8px;
     border-radius: 10px;
 
@@ -48,13 +48,13 @@ const type = computed(() => {
       display: none;
     }
     &.low {
-      background-color: red;
+      background-color: #ec0402;
     }
     &.medium {
-      background-color: orange;
+      background-color: #f68a27;
     }
     &.high {
-      background-color: green;
+      background-color: #3cf527;
     }
   }
 }
