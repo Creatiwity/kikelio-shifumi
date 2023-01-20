@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import PlayerSide from "@/components/PlayerSide.vue";
-import { PlayerType } from "@/types/Players";
 
 const player1 = {
   name: "Player 1",
@@ -18,8 +17,8 @@ const player2 = {
 </script>
 <template>
   <div class="game">
-    <PlayerSide :player="player1" :for-player="PlayerType.Player1" />
-    <PlayerSide :player="player2" :for-player="PlayerType.Player2" />
+    <PlayerSide :player="player1" for-player="p1" />
+    <PlayerSide :player="player2" for-player="p2" />
   </div>
 </template>
 <style lang="scss">
